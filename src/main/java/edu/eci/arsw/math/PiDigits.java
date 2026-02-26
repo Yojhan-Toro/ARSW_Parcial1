@@ -28,6 +28,13 @@ public class PiDigits {
             throw new RuntimeException("Invalid Interval");
         }
 
+
+        Thread[] hilos = new Thread[N];
+
+        for (int i = 0; i < N; i++) {
+
+        }
+
         byte[] digits = new byte[count];
         double sum = 0;
 
