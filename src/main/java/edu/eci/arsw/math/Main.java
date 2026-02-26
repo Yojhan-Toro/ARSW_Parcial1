@@ -5,18 +5,30 @@
  */
 package edu.eci.arsw.math;
 
+import edu.eci.arsw.math.Multicalculo;
 import java.util.Arrays;
 
 /**
  *
  * @author hcadavid
  */
-public class Main {
+public class Main{
 
+
+    static Multicalculo multicalculo = new Multicalculo(10, 1000);
     public static void main(String a[]) {
-        System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
+        System.out.println(bytesToHex(PiDigits.getDigits(0, 1)));
+        System.out.println(bytesToHex(PiDigits.getDigits(1, 2)));
+        //System.out.println(bytesToHex(PiDigits.getDigits(0, 2)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 100)));
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000)));
+        //System.out.println(bytesToHex(PiDigits.getDigits(999999, 1000000)));
+        HiloCalculador hilo = new HiloCalculador(1, 100);
+        hilo.start();
+
+
+
+        System.out.println("Salida = "+ multicalculo.numeroDigitos());
+
     }
 
     private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
